@@ -1,25 +1,23 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.*;
 import javax.swing.*;
 
 public class GameFrame extends JFrame {
     private int numBuche;
-    private JButton btnEsci;
-    protected JButton btnGioca;
+    // private JButton btnEsci;
+    // protected JButton btnGioca;
     protected MyLabel etichettLabel;
+    Image cursorIMG = Toolkit.getDefaultToolkit().getImage("img/cursor.png");
+    Point cursorPoint = new Point(0, 0);
+    Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(cursorIMG, cursorPoint, "martello");
 
     public GameFrame(int numBuche) {
         super("TalpaMania");
         this.setSize(450, 400);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setCursor(cursor);
         this.numBuche = numBuche;
+        setResizable(false);
         initComponents();
         initPanels();
         initListeners();

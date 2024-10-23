@@ -8,8 +8,8 @@ public class testInline {
         int counterTalpeAmmazzate = 0;
 
         ArrayList<Talpa> talpe = new ArrayList<>(talpeDaSpawnare);
-        for (Talpa x : talpe) {
-            x = new Talpa();
-        }
+        // for (Talpa x : talpe) {
+        // x = new Talpa();
+        // }
     }
 }
