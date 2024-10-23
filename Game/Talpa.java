@@ -8,11 +8,9 @@ public class Talpa extends Thread {
 
     // costruttore
     public Talpa(String nome, Campo b) {
-        super(nome); // questa volta viene richiamato esplicitamente il costruttore super() della
-                     // classe Thread
-                     // per passare al thread il nome ricevuto come parametro di ingresso
+        super(nome);
         campo = b;
-        start(); // avvio il thread alla creazione eseguendo le istruzioni di run()
+        // start();
     }
 
     public void run() {
