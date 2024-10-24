@@ -5,7 +5,7 @@ public class GameFrame extends JFrame {
     private int numBuche;
     // private JButton btnEsci;
     // protected JButton btnGioca;
-    protected MyLabel etichettLabel;
+    protected MyLabel etichettaLabel;
     Image cursorIMG = Toolkit.getDefaultToolkit().getImage("img/cursor.png");
     Point cursorPoint = new Point(0, 0);
     Cursor cursor = Toolkit.getDefaultToolkit().createCustomCursor(cursorIMG, cursorPoint, "martello");
@@ -21,23 +21,22 @@ public class GameFrame extends JFrame {
         initComponents();
         initPanels();
         initListeners();
-        pack();
+        // pack();
         setVisible(true);
     }
 
     private void initComponents() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initComponents'");
+        etichettaLabel = new MyLabel("Denian puttana");
     }
 
     private void initPanels() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initPanels'");
+        JPanel pnlNord = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        pnlNord.add(etichettaLabel);
+        this.getContentPane().add(pnlNord, BorderLayout.NORTH);
     }
 
     private void initListeners() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'initListeners'");
+        System.out.println("denian puttana");
     }
 
 }
