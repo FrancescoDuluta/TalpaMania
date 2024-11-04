@@ -28,139 +28,35 @@ public class GameFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        pnlTitoli = new javax.swing.JPanel();
-        lblTitolo = new javax.swing.JLabel();
-        lblSottotitolo = new javax.swing.JLabel();
-        pnlDifficolta = new javax.swing.JPanel();
-        lblScegliDifficicolta = new javax.swing.JLabel();
-        rbFacile = new javax.swing.JRadioButton();
-        rbMedia = new javax.swing.JRadioButton();
-        rbDifficile = new javax.swing.JRadioButton();
-        sfondo = new javax.swing.JLabel();
+        lblSfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TalpaMania");
         setAlwaysOnTop(true);
-        setBackground(new java.awt.Color(204, 255, 255));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        setBackground(new java.awt.Color(204, 250, 250));
+        setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/cursor.png")), new Point(0, 0), "Custom Cursor"));
         setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         setForeground(java.awt.Color.white);
         setIconImages(null);
         setLocation(new java.awt.Point(500, 250));
-        setName("frame1"); // NOI18N
+        setMinimumSize(new java.awt.Dimension(640, 450));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pnlTitoli.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
-        pnlTitoli.setOpaque(false);
+        lblSfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
+        lblSfondo.setText(" ");
+        lblSfondo.setToolTipText("");
+        lblSfondo.setName("sfondo"); // NOI18N
 
-        lblTitolo.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
-        lblTitolo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitolo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitolo.setText("TalpaMania");
-        lblTitolo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        lblSottotitolo.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
-        lblSottotitolo.setForeground(new java.awt.Color(255, 255, 255));
-        lblSottotitolo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSottotitolo.setText("Acchiappa le talpe prima che sia troppo tardi...");
-
-        javax.swing.GroupLayout pnlTitoliLayout = new javax.swing.GroupLayout(pnlTitoli);
-        pnlTitoli.setLayout(pnlTitoliLayout);
-        pnlTitoliLayout.setHorizontalGroup(
-            pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTitoliLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblSottotitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlTitoliLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lblTitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
-                    .addContainerGap()))
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblSfondo, javax.swing.GroupLayout.PREFERRED_SIZE, 637, Short.MAX_VALUE)
         );
-        pnlTitoliLayout.setVerticalGroup(
-            pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTitoliLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
-                .addComponent(lblSottotitolo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnlTitoliLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(lblTitolo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(43, Short.MAX_VALUE)))
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblSfondo)
         );
-
-        getContentPane().add(pnlTitoli, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 100));
-
-        pnlDifficolta.setOpaque(false);
-
-        lblScegliDifficicolta.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        lblScegliDifficicolta.setForeground(new java.awt.Color(255, 255, 255));
-        lblScegliDifficicolta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblScegliDifficicolta.setText("Scegli una difficoltà:");
-
-        rbFacile.setBackground(new java.awt.Color(102, 51, 255));
-        buttonGroup1.add(rbFacile);
-        rbFacile.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
-        rbFacile.setForeground(new java.awt.Color(255, 255, 255));
-        rbFacile.setText("Facile");
-        rbFacile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbFacile.setIconTextGap(10);
-        rbFacile.setOpaque(false);
-
-        rbMedia.setBackground(new java.awt.Color(102, 51, 255));
-        buttonGroup1.add(rbMedia);
-        rbMedia.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
-        rbMedia.setForeground(new java.awt.Color(255, 255, 255));
-        rbMedia.setText("Media");
-        rbMedia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbMedia.setIconTextGap(10);
-        rbMedia.setOpaque(false);
-
-        rbDifficile.setBackground(new java.awt.Color(102, 51, 255));
-        buttonGroup1.add(rbDifficile);
-        rbDifficile.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
-        rbDifficile.setForeground(new java.awt.Color(255, 255, 255));
-        rbDifficile.setText("Difficile");
-        rbDifficile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rbDifficile.setIconTextGap(10);
-        rbDifficile.setOpaque(false);
-
-        javax.swing.GroupLayout pnlDifficoltaLayout = new javax.swing.GroupLayout(pnlDifficolta);
-        pnlDifficolta.setLayout(pnlDifficoltaLayout);
-        pnlDifficoltaLayout.setHorizontalGroup(
-            pnlDifficoltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDifficoltaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlDifficoltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbFacile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rbMedia, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
-                    .addComponent(rbDifficile, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE))
-                .addContainerGap())
-            .addComponent(lblScegliDifficicolta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        pnlDifficoltaLayout.setVerticalGroup(
-            pnlDifficoltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDifficoltaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblScegliDifficicolta, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(rbFacile)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbMedia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbDifficile)
-                .addGap(86, 86, 86))
-        );
-
-        getContentPane().add(pnlDifficolta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 600, 280));
-
-        sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/background.png"))); // NOI18N
-        sfondo.setText(" ");
-        getContentPane().add(sfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,15 +97,6 @@ public class GameFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel lblScegliDifficicolta;
-    private javax.swing.JLabel lblSottotitolo;
-    private javax.swing.JLabel lblTitolo;
-    private javax.swing.JPanel pnlDifficolta;
-    private javax.swing.JPanel pnlTitoli;
-    private javax.swing.JRadioButton rbDifficile;
-    private javax.swing.JRadioButton rbFacile;
-    private javax.swing.JRadioButton rbMedia;
-    private javax.swing.JLabel sfondo;
+    private javax.swing.JLabel lblSfondo;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,10 +4,22 @@ public class Buco {
     private boolean isTalpaAssegnata;
 
     public Buco(int id) {
+        // this.image: Image
         this.id = id;
         talpaAssegnata = null;
         isTalpaAssegnata = false;
     }
+
+    /**
+     * pub getStrite(): Image
+     * 
+     * 
+     * - nel monitor
+     * paintComponent(Graphics g)
+     * super.paintComponent(g)
+     * g.drawImage(x, y, w, h, Buco.getSprite())
+     * 
+     */
 
     public int getId() {
         return id;
