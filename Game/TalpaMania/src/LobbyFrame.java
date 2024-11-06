@@ -109,7 +109,6 @@ public class LobbyFrame extends javax.swing.JFrame {
         rbFacile.setText("Facile");
         rbFacile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rbFacile.setIconTextGap(10);
-        rbFacile.setOpaque(false);
         rbFacile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbFacileActionPerformed(evt);
@@ -123,7 +122,6 @@ public class LobbyFrame extends javax.swing.JFrame {
         rbMedia.setText("Media");
         rbMedia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rbMedia.setIconTextGap(10);
-        rbMedia.setOpaque(false);
         rbMedia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbMediaActionPerformed(evt);
@@ -137,7 +135,6 @@ public class LobbyFrame extends javax.swing.JFrame {
         rbDifficile.setText("Difficile");
         rbDifficile.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rbDifficile.setIconTextGap(10);
-        rbDifficile.setOpaque(false);
         rbDifficile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbDifficileActionPerformed(evt);
