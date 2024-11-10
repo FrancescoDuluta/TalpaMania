@@ -54,6 +54,7 @@ public class LobbyFrame extends javax.swing.JFrame {
 
         pnlTitoli.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         pnlTitoli.setOpaque(false);
+        pnlTitoli.setPreferredSize(new java.awt.Dimension(640, 100));
 
         lblTitolo.setFont(new java.awt.Font("Segoe Print", 1, 36)); // NOI18N
         lblTitolo.setForeground(new java.awt.Color(255, 255, 255));
@@ -72,7 +73,7 @@ public class LobbyFrame extends javax.swing.JFrame {
             pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTitoliLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblSottotitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
+                .addComponent(lblSottotitolo, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlTitoliLayout.createSequentialGroup()
@@ -83,14 +84,14 @@ public class LobbyFrame extends javax.swing.JFrame {
         pnlTitoliLayout.setVerticalGroup(
             pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTitoliLayout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(lblSottotitolo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(pnlTitoliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlTitoliLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(lblTitolo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(43, Short.MAX_VALUE)))
+                    .addContainerGap(48, Short.MAX_VALUE)))
         );
 
         getContentPane().add(pnlTitoli, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 100));
@@ -172,6 +173,9 @@ public class LobbyFrame extends javax.swing.JFrame {
 
         sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
         sfondo.setText(" ");
+        sfondo.setMaximumSize(new java.awt.Dimension(640, 450));
+        sfondo.setMinimumSize(new java.awt.Dimension(640, 450));
+        sfondo.setPreferredSize(new java.awt.Dimension(640, 450));
         getContentPane().add(sfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 450));
 
         pack();
