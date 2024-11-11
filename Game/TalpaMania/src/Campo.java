@@ -7,12 +7,12 @@ import java.util.Random;
 
 // Updated classes as per your request
 
-public class Campo {
-    private final ArrayList<Buco> buchi;
+public class Campo extends JPanel{
+    protected final ArrayList<Buco> buchi;
     private int talpeUscite;
     private int talpeSchiacciate;
-    private final JLabel lblTalpeUscite;
-    private final JLabel lblTalpeSchiacciate;
+    protected final JLabel lblTalpeUscite;
+    protected final JLabel lblTalpeSchiacciate;
 
     public Campo(JLabel lblTalpeUscite, JLabel lblTalpeSchiacciate) {
         buchi = new ArrayList<>();
@@ -20,6 +20,7 @@ public class Campo {
         talpeSchiacciate = 0;
         this.lblTalpeUscite = lblTalpeUscite;
         this.lblTalpeSchiacciate = lblTalpeSchiacciate;
+        System.out.println("Ho creato il campo");
     }
 
     public synchronized void addBuco(Buco buco) {
@@ -28,22 +29,27 @@ public class Campo {
 
     public synchronized void startGame(int difficolta) {
         int numeroBuchi = difficolta == 1 ? 5 : difficolta == 2 ? 7 : 12;
+        System.out.println(numeroBuchi);
         int tempoVisibilita = difficolta == 1 ? 4000 : difficolta == 2 ? 2000 : 1000;
+        System.out.println(tempoVisibilita);
 
         for (int i = 0; i < numeroBuchi; i++) {
             Buco buco = new Buco(i, this);
             addBuco(buco);
         }
-
+        
+        this.add(lblTalpeUscite);
+        //this.add(lblTalpeSchiacciate);
+        System.out.println("Buco aggiunto");
         // Genera thread per le talpe
-        for (int i = 0; i < 20; i++) {
+        /*for (int i = 0; i < 20; i++) {
             new Talpa(this, tempoVisibilita).start();
             try {
                 Thread.sleep(new Random().nextInt(3000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
     }
 
     public synchronized Buco getRandomBuco() {

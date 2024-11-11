@@ -7,6 +7,7 @@
 import javax.swing.*;
 import java.awt.*;
 
+
 /**
  *
  * @author duluta11265
@@ -34,8 +35,8 @@ public class GameFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panel = new javax.swing.JPanel();
-        lblSfondo = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TalpaMania");
@@ -48,45 +49,42 @@ public class GameFrame extends javax.swing.JFrame {
         setLocation(new java.awt.Point(500, 250));
         setMaximumSize(new java.awt.Dimension(640, 450));
         setMinimumSize(new java.awt.Dimension(640, 450));
+        setPreferredSize(new java.awt.Dimension(640, 450));
         setResizable(false);
+        getContentPane().setLayout(null);
 
-        panel.setAlignmentX(0.0F);
-        panel.setAlignmentY(0.0F);
-        panel.setMaximumSize(new java.awt.Dimension(640, 450));
-        panel.setMinimumSize(new java.awt.Dimension(640, 450));
-        panel.setPreferredSize(new java.awt.Dimension(640, 450));
+        jPanel1.setOpaque(false);
+        // Inizializza i JLabel per il contatore delle talpe
+        JLabel lblTalpeUscite = new JLabel("Talpe Uscite: 0");
+        JLabel lblTalpeSchiacciate = new JLabel("Talpe Schiacciate: 0");
 
-        lblSfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
-        lblSfondo.setText(" ");
-        lblSfondo.setToolTipText("");
-        lblSfondo.setMaximumSize(new java.awt.Dimension(650, 450));
-        lblSfondo.setMinimumSize(new java.awt.Dimension(650, 450));
-        lblSfondo.setName("sfondo"); // NOI18N
-        lblSfondo.setPreferredSize(new java.awt.Dimension(640, 450));
+        // Aggiungi questi JLabel al pannello di GameFrame
+        jPanel1.add(lblTalpeUscite);
+        jPanel1.add(lblTalpeSchiacciate);
 
-        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
-        panel.setLayout(panelLayout);
-        panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelLayout.createSequentialGroup()
-                .addComponent(lblSfondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        // Crea un'istanza del campo e inizia il gioco
+        Campo campo = new Campo(lblTalpeUscite, lblTalpeSchiacciate);
+        int difficolta = 1;
+        campo.startGame(difficolta);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
         );
-        panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSfondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 640, 450);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(-3, -4, 640, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -131,7 +129,7 @@ public class GameFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblSfondo;
-    private javax.swing.JPanel panel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

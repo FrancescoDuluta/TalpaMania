@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class LobbyFrame extends javax.swing.JFrame {
 
-    protected int difficulty; 
+    public int difficulty; 
     /**
      * Creates new form GameFrame
      */
@@ -173,6 +173,9 @@ public class LobbyFrame extends javax.swing.JFrame {
 
         sfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/background.png"))); // NOI18N
         sfondo.setText(" ");
+        sfondo.setAlignmentY(0.0F);
+        sfondo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        sfondo.setIconTextGap(0);
         sfondo.setMaximumSize(new java.awt.Dimension(640, 450));
         sfondo.setMinimumSize(new java.awt.Dimension(640, 450));
         sfondo.setPreferredSize(new java.awt.Dimension(640, 450));
