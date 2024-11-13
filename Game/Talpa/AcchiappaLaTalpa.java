@@ -33,8 +33,8 @@ public class AcchiappaLaTalpa extends JFrame {
     // definisco i 3 percorsi delle immagini usate nella classe
 
     private String percorsoImmagineTalpa = "./immagini/talpa6.png";
-    private String percorsoImmagineSfondo = "./immagini/sfondo_final.png";
-    private String percorsoImmagineSfondoIniziale = "./immagini/sfondo_iniziale.png";
+    private String percorsoImmagineSfondo = "./immagini/sfondo1.png";
+    private String percorsoImmagineSfondoIniziale = "./immagini/arcade.png";
 
     // definisco variabili e etichette per il punteggio e tempo del gioco
 
@@ -72,7 +72,7 @@ public class AcchiappaLaTalpa extends JFrame {
         Font customFont = null;
         try {
             // setto il font che ho scaricato
-            customFont = Font.createFont(Font.TRUETYPE_FONT, new File("./font/Poppins-Regular.ttf")).deriveFont(32f);
+            customFont = Font.createFont(Font.TRUETYPE_FONT, new File("./font/Crang.ttf")).deriveFont(40f);
 
             // Registro il font nel sistema Java
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -81,7 +81,7 @@ public class AcchiappaLaTalpa extends JFrame {
         } catch (IOException | FontFormatException e) {
             // In caso di errore, usa un font di default
             e.printStackTrace();
-            customFont = new Font("Arial", Font.BOLD, 32);
+            customFont = new Font("Comic-Sans", Font.BOLD, 40);
         }
 
         // Creo il pannello per la schermata iniziale con sfondo
