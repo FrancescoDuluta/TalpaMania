@@ -1,3 +1,0 @@
-Ho un gioco in cui ci sono 20 talpe e 5 buche. Una talpa esce in un buco a caso e se non viene cliccata entro un tempo casuale, scompare e poco dopo ne fa apparire un'altra.
-Nel campo ci può essere soltanto una talpa alla volta. Ogni volta che una talpa esce il contatore aumenta. 
-Per vincere bisogna schiacciare 10 talpe prima che ne siano uscite 20 (prima che il counter delle talpe spawnate arrivi a 20).

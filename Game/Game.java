@@ -14,7 +14,7 @@ import java.io.IOException; //utilizzata per aggiungere il font
  * schermata iniziale e di una schermata di gioco con sfondi personalizzati.
  */
 
-public class AcchiappaLaTalpa extends JFrame {
+public class Game extends JFrame {
 
     private static final int N = 4; // variabile che serve a definire il numero di buche e talpe
     private static final int NUMERO_TALPE = N * N; // definisco il numero di talpe
@@ -32,9 +32,9 @@ public class AcchiappaLaTalpa extends JFrame {
 
     // definisco i 3 percorsi delle immagini usate nella classe
 
-    private String percorsoImmagineTalpa = "./immagini/talpa6.png";
-    private String percorsoImmagineSfondo = "./immagini/sfondo1.png";
-    private String percorsoImmagineSfondoIniziale = "./immagini/arcade.png";
+    private String percorsoImmagineTalpa = "./immagini/talpa.png";
+    private String percorsoImmagineSfondo = "./immagini/sfondo.png";
+    private String percorsoImmagineSfondoIniziale = "./immagini/lobby.png";
 
     // definisco variabili e etichette per il punteggio e tempo del gioco
 
@@ -46,13 +46,17 @@ public class AcchiappaLaTalpa extends JFrame {
     /**
      * Costruttore
      */
-    public AcchiappaLaTalpa() {
+    public Game() {
 
         // definisco il titolo della schemata, la grandezza e la sua posizione realtiva
-        // allo schemo
-        setTitle("Acchiappa la Talpa!");
+        // allo schermo
+        setTitle("TalpaMania");
         setSize(800, 800);
         setLocationRelativeTo(null);
+        setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+                Toolkit.getDefaultToolkit().getImage(getClass().getResource("/immagini/cursor.png")), new Point(0, 0),
+                "Custom Cursor"));
+        setIconImage(new ImageIcon(getClass().getResource("/immagini/talpa.png")).getImage());
 
         // quando la finestra viene chiusa, l'applicazione viene "terminata"
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -173,10 +177,14 @@ public class AcchiappaLaTalpa extends JFrame {
 
         // Inizializza il punteggio e il timer
         etichettaPunteggio = new JLabel("Punteggio: " + punteggio);
+        etichettaPunteggio.setForeground(Color.WHITE);
         timerLabel = new JLabel("Tempo rimanente: " + TEMPO_GIOCO);
+        timerLabel.setForeground(Color.WHITE);
 
         // Pannello per score e timer
         JPanel panelInfo = new JPanel();
+        panelInfo.setBackground(Color.black);
+        panelInfo.setForeground(Color.WHITE);
         panelInfo.add(etichettaPunteggio);
         panelInfo.add(timerLabel);
 
@@ -195,7 +203,9 @@ public class AcchiappaLaTalpa extends JFrame {
                     timerLabel.setText("Tempo rimanente: " + tempoRimanente);
                 } else {
                     ((Timer) e.getSource()).stop();
-                    JOptionPane.showMessageDialog(null, "Tempo scaduto! Punteggio finale: " + punteggio);
+                    JOptionPane.showMessageDialog(null, "Tempo scaduto! Punteggio finale: " + punteggio,
+                            "Fine del gioco", JOptionPane.INFORMATION_MESSAGE,
+                            new ImageIcon(getClass().getResource("/immagini/talpa.png")));
                     dispose();
                 }
             }
@@ -221,7 +231,7 @@ public class AcchiappaLaTalpa extends JFrame {
      * @param args
      */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new AcchiappaLaTalpa().setVisible(true));
+        SwingUtilities.invokeLater(() -> new Game().setVisible(true));
     }
 
     /**
