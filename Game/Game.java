@@ -131,7 +131,8 @@ public class Game extends JFrame {
         panelPrincipale.setLayout(new BorderLayout());
 
         // creo il pannello con l'immagine di sfondo, importando la immagine all'interno
-        // della cartella immagini tramite il percorso definito in precedenza
+        // della cartella immagini tramite il percorso definito in precedenza (guardare
+        // riga 30)
         JPanel panelConSfondo = new JPanel() {
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
